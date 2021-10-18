@@ -1,0 +1,23 @@
+install.packages("archdata")
+library(archdata)
+library(RcmdrMisc)
+install.packages("archdata")
+library(archdata)
+library(RcmdrMisc)
+install.library(archdata)
+??archdata
+data(DartPoints)
+View(DartPoints)
+mean(DartPoints$Length)
+options(digits=3)
+numSummary(DartPoints[, 5:11])
+Summary(DartPoints[, 5:11])
+table(DartPoints$Name)
+(DP_Type <- table(DartPoints$Name))
+prop.table(DP_Type)*100
+(DP_CT <- xtabs(~Name+Blade.Sh, DartPoints))
+addmargins(DP_CT)
+dim(DartPoints)
+View(DartPoints)
+addmargins(xtabs(~Name+addNA(Blade.Sh), DartPoints))
+??archdata
